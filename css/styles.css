@@ -1,0 +1,59 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #aed4d9;
+    color: #e8e9ff;
+    font-family: sans-serif;
+}
+
+.containerToDo
+{
+    margin: 2vh;
+    background-color: #1ea4d6;
+    padding: 1vh;
+}
+
+.titleApp
+{
+    text-align: center;
+    color:#e8e9ff;
+    font-size: 28px;
+}
+
+.toDoItem
+{
+    background: #b64471;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+}
+
+.secondTitle
+{
+    text-align: center;
+}
+
+.formToDo
+{
+    background: #3eb6e3;
+    padding: 5px;
+}
+
+.buttonToDo
+{
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 4px;
+    border-color: #b12571;
+    background-color: #2abd82;
+    color: #defbff;
+}
+
+.activityToDoItem
+{
+    color: #68ebb6;
+}

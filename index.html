@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="toDoModule">
+    <head>
+        <meta charset="utf-8">
+        <title>To Do It</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="./js/angular-local-storage.min.js" charset="utf-8"></script>
+        <script src="./js/toDo.controller.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body ng-controller="toDoController">
+
+        <div class="containerToDo">
+            <h4 class="titleApp">To Do It</h4>
+            <br>
+            <form ng-submit="addAct()" class="formToDo">
+                <h5 class="secondTitle">Create a task</h5>
+                <p>What do you want to do it?</p>
+                <input type="text" ng-model="newAct.description">
+                <br><br>
+                <p>When?</p>
+                <input type="datetime-local" ng-model="newAct.date">
+                <br><br>
+                <input class="buttonToDo" type="submit" value="Save Task">
+                <button class="buttonToDo" type="button" ng-click="cleanToDo()">Clean all Tasks</button>
+            </form>
+            <br><br><br>
+
+            <div class="containerTasks">
+                <h5 class="secondTitle">My Tasks</h5>
+                <ul>
+                    <li class="toDoItem" ng-repeat="xActivity in toDo">
+                        <p class="activityToDoItem">{{xActivity.description}}</p>
+                        <br>
+                        {{xActivity.date | date:'short'}}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
+</html>
